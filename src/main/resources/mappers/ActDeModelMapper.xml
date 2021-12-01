@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cyneck.workflow.mapper.ActDeModelMapper">
+
+    <resultMap id="actDeModelMap"
+               type="com.cyneck.workflow.model.entity.ActDeModelEntity">
+        <id property="id" column="id"/>
+        <result property="name" column="`name`"/>
+        <result property="modelKey" column="model_key"/>
+        <result property="description" column="description"/>
+        <result property="modelComment" column="model_comment"/>
+        <result property="created" column="created"/>
+        <result property="createdBy" column="created_by"/>
+        <result property="lastUpdated" column="last_updated"/>
+        <result property="lastUpdatedBy" column="last_updated_by"/>
+        <result property="version" column="version"/>
+        <result property="modelEditorJson" column="model_editor_json"/>
+        <result property="thumbnail" column="thumbnail"/>
+        <result property="modelType" column="model_type"/>
+        <result property="tenantId" column="tenant_id"/>
+    </resultMap>
+
+    <sql id="tableName">
+        act_de_model
+    </sql>
+
+    <sql id="baseColumn">
+        id,`name`,model_key,description,model_comment,created,created_by,last_updated,last_updated_by,version,model_editor_json,thumbnail,model_type,tenant_id
+    </sql>
+
+
+</mapper>
